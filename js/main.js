@@ -1,5 +1,5 @@
 /**
- * Luminé Studio — Main JavaScript
+ * Taran AY photography — Main JavaScript
  * Mobile navigation, scroll effects, and gallery filters
  */
 
@@ -151,5 +151,11 @@
         }, 3000);
       }
     });
+  }
+
+  /* --- Dynamic Copyright Year --- */
+  const copyright = document.querySelector('.footer__copy');
+  if (copyright) {
+    copyright.innerHTML = `&copy; ${new Date().getFullYear()} Taran AY photography. All rights reserved.`;
   }
 })();

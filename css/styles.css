@@ -1,5 +1,5 @@
 /* =============================================
-   LUMINÉ STUDIO — Global Stylesheet
+   Taran AY photography — Global Stylesheet
    Editorial minimalist design system
    ============================================= */
 
@@ -228,6 +228,11 @@ p:last-child {
 
 .logo:hover {
   opacity: 1;
+}
+
+.logo__image {
+  height: 40px;
+  width: auto;
 }
 
 .nav {
@@ -508,6 +513,10 @@ p:last-child {
   background-color: var(--color-white);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
+}
+
+.packages__header {
+  margin-bottom: var(--space-lg);
 }
 
 .package-card {
