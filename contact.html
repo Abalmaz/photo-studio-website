@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Luminé Studio — book a session, visit our studio, or send us a message.">
+  <title>Contact — Luminé Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header__inner">
+      <a href="index.html" class="logo">Luminé</a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Home</a></li>
+          <li><a href="about.html" class="nav__link">About</a></li>
+          <li><a href="services.html" class="nav__link">Services</a></li>
+          <li><a href="gallery.html" class="nav__link">Gallery</a></li>
+          <li><a href="contact.html" class="nav__link nav__link--active">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <ul class="mobile-nav__list">
+      <li><a href="index.html" class="mobile-nav__link">Home</a></li>
+      <li><a href="about.html" class="mobile-nav__link">About</a></li>
+      <li><a href="services.html" class="mobile-nav__link">Services</a></li>
+      <li><a href="gallery.html" class="mobile-nav__link">Gallery</a></li>
+      <li><a href="contact.html" class="mobile-nav__link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow fade-in">Get in Touch</p>
+        <h1 class="fade-in">Let's Connect</h1>
+        <p class="lead fade-in">Whether you're ready to book or simply curious, we'd love to hear from you. Every great image starts with a conversation.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Contact Information -->
+          <div class="contact-info fade-in">
+            <div class="contact-info__block">
+              <h4>Studio Address</h4>
+              <p>142 Linden Avenue, Suite 4<br>Brooklyn, NY 11201</p>
+            </div>
+
+            <div class="contact-info__block">
+              <h4>Email</h4>
+              <p><a href="mailto:hello@luminestudio.com">hello@luminestudio.com</a></p>
+            </div>
+
+            <div class="contact-info__block">
+              <h4>Phone</h4>
+              <p><a href="tel:+12125550142">(212) 555-0142</a></p>
+            </div>
+
+            <div class="contact-info__block">
+              <h4>Working Hours</h4>
+              <table class="hours-table">
+                <tr>
+                  <td>Monday – Friday</td>
+                  <td>10:00 AM – 6:00 PM</td>
+                </tr>
+                <tr>
+                  <td>Saturday</td>
+                  <td>By appointment</td>
+                </tr>
+                <tr>
+                  <td>Sunday</td>
+                  <td>Closed</td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="contact-info__block">
+              <h4>Follow Us</h4>
+              <div class="social-links">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">Pinterest</a>
+                <a href="https://vimeo.com" target="_blank" rel="noopener noreferrer">Vimeo</a>
+              </div>
+            </div>
+
+            <div class="contact-info__block">
+              <h4>Booking Information</h4>
+              <p class="text-muted">Sessions are booked on a first-come, first-served basis. A 50% retainer is required to secure your date. Full payment is due one week before your session. Cancellations made 30+ days in advance receive a full retainer refund.</p>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="fade-in">
+            <h3 style="margin-bottom: var(--space-md);">Send a Message</h3>
+            <form class="contact-form" action="#" method="post">
+              <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="service">Session Type</label>
+                <select id="service" name="service" required>
+                  <option value="" disabled selected>Select a session type</option>
+                  <option value="portrait">Portrait Session</option>
+                  <option value="couples">Couples Session</option>
+                  <option value="family">Family Session</option>
+                  <option value="editorial">Editorial Session</option>
+                  <option value="wedding">Wedding Collection</option>
+                  <option value="mini">Seasonal Mini Session</option>
+                  <option value="custom">Custom Project</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="date">
+              </div>
+              <div class="form-group">
+                <label for="message">Tell Us About Your Vision</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Share details about your session, event date, or any questions you have..."></textarea>
+              </div>
+              <button type="submit" class="btn">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Map -->
+    <section class="section">
+      <div class="container fade-in">
+        <div class="text-center" style="margin-bottom: var(--space-md);">
+          <p class="eyebrow">Find Us</p>
+          <h3>Visit the Studio</h3>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://maps.google.com/maps?q=142+Linden+Avenue+Brooklyn+NY+11201&output=embed"
+            title="Luminé Studio location on Google Maps"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="index.html" class="footer__logo">Luminé</a>
+      <nav class="footer__nav" aria-label="Footer navigation">
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer__copy">&copy; 2026 Luminé Studio. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
