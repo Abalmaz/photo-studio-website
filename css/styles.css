@@ -19,7 +19,7 @@
   --space-lg: 4rem;
   --space-xl: 6rem;
 
-  --header-height: 100px;
+  --header-height: 160px; /* Increased for larger logo */
   --transition: 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --max-width: 1400px;
 }
@@ -103,7 +103,7 @@ p { margin-bottom: var(--space-sm); }
   max-width: var(--max-width);
   margin: 0 auto;
 }
-.logo img { height: 70px; width: auto; }
+.logo img { height: 140px; width: auto; } /* Logo size x2 */
 .nav { display: none; }
 .nav__list { display: flex; align-items: center; gap: var(--space-md); }
 .nav__link {
@@ -161,7 +161,13 @@ p { margin-bottom: var(--space-sm); }
 .hero { position: relative; min-height: calc(100vh - var(--header-height)); display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: var(--space-lg) var(--space-md); background-size: cover; background-position: center; color: var(--color-white); }
 .hero::before { content: ''; position: absolute; inset: 0; background-color: rgba(0, 0, 0, 0.3); z-index: 1; }
 .hero > * { position: relative; z-index: 2; }
-.hero h1 { font-size: clamp(3.5rem, 7vw, 6rem); margin-bottom: var(--space-sm); color: var(--color-white); }
+.hero h1 {
+  font-family: 'Cormorant Garamond', serif; /* Reverted Font */
+  font-style: italic; /* Reverted Style */
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  margin-bottom: var(--space-sm);
+  color: var(--color-white);
+}
 .hero .lead { color: rgba(255, 255, 255, 0.9); margin-left: auto; margin-right: auto; margin-bottom: var(--space-md); }
 
 /* --- Category Showcase (Home) --- */
