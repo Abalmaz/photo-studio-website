@@ -64,7 +64,7 @@ h3 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
 h4 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
 
 p { margin-bottom: var(--space-sm); }
-.lead { font-size: 1.125rem; max-width: 60ch; }
+.lead { font-size: 1.5rem; max-width: 60ch; }
 .eyebrow {
   font-family: var(--font-body);
   font-size: 0.75rem;
@@ -103,7 +103,7 @@ p { margin-bottom: var(--space-sm); }
   max-width: var(--max-width);
   margin: 0 auto;
 }
-.logo img { height: 140px; width: auto; } /* Logo size x2 */
+.logo img { height: 180px; width: auto; }
 .nav { display: none; }
 .nav__list { display: flex; align-items: center; gap: var(--space-md); }
 .nav__link {
@@ -164,7 +164,7 @@ p { margin-bottom: var(--space-sm); }
 .hero h1 {
   font-family: 'Cormorant Garamond', serif; /* Reverted Font */
   font-style: italic; /* Reverted Style */
-  font-size: clamp(3.5rem, 7vw, 6rem);
+  font-size: clamp(5.5rem, 8vw, 7rem);
   margin-bottom: var(--space-sm);
   color: var(--color-white);
 }
