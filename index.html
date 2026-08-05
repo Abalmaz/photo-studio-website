@@ -3,28 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Taran AY photography — Boutique photography studio specializing in editorial portraits, weddings, and fine art imagery.">
-  <title>Taran AY photography — Fine Art Photography</title>
+  <meta name="description" content="Taran AY Photography specializes in newborn, maternity, and cake smash photography.">
+  <title>Taran AY Photography — Newborn, Maternity & Cake Smash</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- Header -->
   <header class="header">
     <div class="header__inner">
       <a href="index.html" class="logo">
-        <img src="images/logo.jpg" alt="Taran AY photography Logo" class="logo__image">
+        <img src="images/logo.png" alt="Taran AY Photography Logo" style="height: 40px; width: auto;">
       </a>
       <nav class="nav" aria-label="Main navigation">
         <ul class="nav__list">
           <li><a href="index.html" class="nav__link nav__link--active">Home</a></li>
-          <li><a href="about.html" class="nav__link">About</a></li>
           <li><a href="services.html" class="nav__link">Services</a></li>
           <li><a href="gallery.html" class="nav__link">Gallery</a></li>
           <li><a href="contact.html" class="nav__link">Contact</a></li>
+          <li><a href="https://nXXXXXX.alteg.io/" class="btn ms_booking">Book Now</a></li>
         </ul>
       </nav>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -35,108 +34,64 @@
     </div>
   </header>
 
-  <!-- Mobile Navigation -->
   <nav class="mobile-nav" aria-label="Mobile navigation">
     <ul class="mobile-nav__list">
       <li><a href="index.html" class="mobile-nav__link">Home</a></li>
-      <li><a href="about.html" class="mobile-nav__link">About</a></li>
       <li><a href="services.html" class="mobile-nav__link">Services</a></li>
       <li><a href="gallery.html" class="mobile-nav__link">Gallery</a></li>
       <li><a href="contact.html" class="mobile-nav__link">Contact</a></li>
+      <li><a href="https://nXXXXXX.alteg.io/" class="btn ms_booking" style="margin-top: 1rem;">Book Now</a></li>
     </ul>
   </nav>
 
   <main>
-    <!-- Hero -->
     <section class="hero">
-      <div class="hero__image">
-        <img src="images/hero.svg" alt="Editorial portrait in natural light">
-      </div>
-      <div class="hero__overlay"></div>
-      <div class="hero__content fade-in">
-        <p class="eyebrow">Boutique Photography Studio</p>
-        <h1>Capturing Light,<br>Crafting Stories</h1>
-        <p class="lead">Timeless imagery for those who value artistry, authenticity, and the quiet beauty of everyday moments.</p>
-        <a href="contact.html" class="btn btn--light">Book a Session</a>
-      </div>
-      <span class="hero__scroll">Scroll</span>
+      <h1>Taran AY Photography</h1>
+      <p class="lead">Newborn • Maternity • Cake Smash</p>
+      <a href="https://nXXXXXX.alteg.io/" class="btn ms_booking">Online Booking</a>
     </section>
 
-    <!-- Philosophy Statement -->
-    <section class="section section--lg">
+    <section class="section">
       <div class="container">
-        <div class="statement fade-in">
-          <blockquote>
-            "We believe photography is not about perfection — it is about presence. Every frame we create is an invitation to pause, to feel, to remember."
-          </blockquote>
-          <cite>— Our Philosophy</cite>
+        <div class="category-showcase">
+          <a href="gallery.html" class="category-card">
+            <img src="images/newborn-showcase.jpg" alt="A sleeping newborn baby" class="category-card__image">
+            <h3 class="category-card__title">Newborn</h3>
+          </a>
+          <a href="gallery.html" class="category-card">
+            <img src="images/cakesmash-showcase.jpg" alt="A baby enjoying a cake smash" class="category-card__image">
+            <h3 class="category-card__title">Cake Smash</h3>
+          </a>
+          <a href="gallery.html" class="category-card">
+            <img src="images/maternity-showcase.jpg" alt="An expectant mother during a maternity photoshoot" class="category-card__image">
+            <h3 class="category-card__title">Maternity</h3>
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Featured Packages -->
-    <section class="packages section section--lg">
+    <section class="cta-banner">
       <div class="container">
-        <div class="text-center fade-in packages__header">
-          <p class="eyebrow">Collections</p>
-          <h2>Featured Sessions</h2>
-          <div class="divider"></div>
-          <p class="lead">Curated experiences designed for every chapter of your story.</p>
-        </div>
-        <div class="grid grid--3">
-          <article class="package-card fade-in">
-            <div class="package-card__image">
-              <img src="images/package-portrait.svg" alt="Portrait session">
-            </div>
-            <h3 class="package-card__title">Portrait Session</h3>
-            <p class="package-card__price">From $450</p>
-            <p class="package-card__desc">An intimate hour-long session capturing your essence in our natural-light studio or on location.</p>
-            <a href="services.html" class="btn btn--outline">View Details</a>
-          </article>
-          <article class="package-card fade-in">
-            <div class="package-card__image">
-              <img src="images/package-wedding.svg" alt="Wedding collection">
-            </div>
-            <h3 class="package-card__title">Wedding Collection</h3>
-            <p class="package-card__price">From $3,200</p>
-            <p class="package-card__desc">Full-day coverage with a documentary-meets-editorial approach to your most cherished day.</p>
-            <a href="services.html" class="btn btn--outline">View Details</a>
-          </article>
-          <article class="package-card fade-in">
-            <div class="package-card__image">
-              <img src="images/package-editorial.svg" alt="Editorial session">
-            </div>
-            <h3 class="package-card__title">Editorial Session</h3>
-            <p class="package-card__price">From $850</p>
-            <p class="package-card__desc">A creative collaboration for brands, artists, and visionaries seeking striking visual narratives.</p>
-            <a href="services.html" class="btn btn--outline">View Details</a>
-          </article>
-        </div>
+        <h2>Schedule Your Session</h2>
+        <p>Book your newborn, maternity, or cake smash photography session online today.</p>
+        <a href="https://nXXXXXX.alteg.io/" class="btn btn--outline ms_booking">Book Now</a>
       </div>
-    </section>
-
-    <!-- CTA Banner -->
-    <section class="cta-banner fade-in">
-      <h2>Let's Create Something Beautiful</h2>
-      <p>Every session begins with a conversation. We'd love to hear about your vision.</p>
-      <a href="contact.html" class="btn btn--light">Get in Touch</a>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="footer">
     <div class="container footer__inner">
-      <a href="index.html" class="footer__logo">Taran AY photography</a>
-      <nav class="footer__nav" aria-label="Footer navigation">
-        <a href="about.html">About</a>
+      <p>&copy; <span id="year"></span> Taran AY Photography. All Rights Reserved.</p>
+      <nav class="footer__nav">
         <a href="services.html">Services</a>
         <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <p class="footer__copy">&copy; 2026 Taran AY photography. All rights reserved.</p>
     </div>
   </footer>
 
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script type="text/javascript" src="https://wXXXXXX.alteg.io/widget/object/js" charset="UTF-8"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

@@ -3,25 +3,27 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Browse the Taran AY photography portfolio — editorial portraits, weddings, and fine art photography.">
-  <title>Gallery — Taran AY photography</title>
+  <meta name="description" content="Portfolio gallery for Taran AY Photography, showcasing maternity, newborn, and cake smash photos.">
+  <title>Gallery — Taran AY Photography</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
   <header class="header">
     <div class="header__inner">
-      <a href="index.html" class="logo">Taran AY photography</a>
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Taran AY Photography Logo" style="height: 40px; width: auto;">
+      </a>
       <nav class="nav" aria-label="Main navigation">
         <ul class="nav__list">
           <li><a href="index.html" class="nav__link">Home</a></li>
-          <li><a href="about.html" class="nav__link">About</a></li>
           <li><a href="services.html" class="nav__link">Services</a></li>
           <li><a href="gallery.html" class="nav__link nav__link--active">Gallery</a></li>
           <li><a href="contact.html" class="nav__link">Contact</a></li>
+          <li><a href="https://nXXXXXX.alteg.io/" class="btn ms_booking">Book Now</a></li>
         </ul>
       </nav>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -35,112 +37,51 @@
   <nav class="mobile-nav" aria-label="Mobile navigation">
     <ul class="mobile-nav__list">
       <li><a href="index.html" class="mobile-nav__link">Home</a></li>
-      <li><a href="about.html" class="mobile-nav__link">About</a></li>
       <li><a href="services.html" class="mobile-nav__link">Services</a></li>
       <li><a href="gallery.html" class="mobile-nav__link">Gallery</a></li>
       <li><a href="contact.html" class="mobile-nav__link">Contact</a></li>
+      <li><a href="https://nXXXXXX.alteg.io/" class="btn ms_booking" style="margin-top: 1rem;">Book Now</a></li>
     </ul>
   </nav>
 
   <main class="main-content">
     <section class="page-hero">
       <div class="container">
-        <p class="eyebrow fade-in">Portfolio</p>
-        <h1 class="fade-in">Selected Works</h1>
-        <p class="lead fade-in">A curated collection of moments, moods, and the quiet poetry found in everyday light.</p>
+        <h1 class="eyebrow">Portfolio</h1>
+        <p class="lead">A curated collection of our favorite moments.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <!-- Filter Buttons -->
-        <div class="gallery-filters fade-in">
-          <button class="gallery-filters__btn gallery-filters__btn--active" data-filter="all">All</button>
-          <button class="gallery-filters__btn" data-filter="portraits">Portraits</button>
-          <button class="gallery-filters__btn" data-filter="weddings">Weddings</button>
-          <button class="gallery-filters__btn" data-filter="editorial">Editorial</button>
-        </div>
-
-        <!-- Gallery Grid -->
         <div class="gallery-grid">
-          <figure class="gallery-item fade-in" data-category="portraits">
-            <img src="images/gallery-01.svg" alt="Soft natural light portrait">
-            <figcaption class="gallery-item__overlay">
-              <span class="gallery-item__caption">Morning Light</span>
-            </figcaption>
-          </figure>
-          <figure class="gallery-item fade-in" data-category="weddings">
-            <img src="images/gallery-02.svg" alt="Wedding ceremony moment">
-            <figcaption class="gallery-item__overlay">
-              <span class="gallery-item__caption">The Vow</span>
-            </figcaption>
-          </figure>
-          <figure class="gallery-item fade-in" data-category="editorial">
-            <img src="images/gallery-03.svg" alt="Editorial fashion portrait">
-            <figcaption class="gallery-item__overlay">
-              <span class="gallery-item__caption">In Bloom</span>
-            </figcaption>
-          </figure>
-          <figure class="gallery-item fade-in" data-category="portraits">
-            <img src="images/gallery-04.svg" alt="Couples portrait session">
-            <figcaption class="gallery-item__overlay">
-              <span class="gallery-item__caption">Together</span>
-            </figcaption>
-          </figure>
-          <figure class="gallery-item fade-in" data-category="weddings">
-            <img src="images/gallery-05.svg" alt="Bridal detail photograph">
-            <figcaption class="gallery-item__overlay">
-              <span class="gallery-item__caption">Details</span>
-            </figcaption>
-          </figure>
-          <figure class="gallery-item fade-in" data-category="editorial">
-            <img src="images/gallery-06.svg" alt="Creative editorial session">
-            <figcaption class="gallery-item__overlay">
-              <span class="gallery-item__caption">Form & Shadow</span>
-            </figcaption>
-          </figure>
-          <figure class="gallery-item fade-in" data-category="portraits">
-            <img src="images/gallery-07.svg" alt="Family portrait outdoors">
-            <figcaption class="gallery-item__overlay">
-              <span class="gallery-item__caption">Generations</span>
-            </figcaption>
-          </figure>
-          <figure class="gallery-item fade-in" data-category="weddings">
-            <img src="images/gallery-08.svg" alt="First dance at reception">
-            <figcaption class="gallery-item__overlay">
-              <span class="gallery-item__caption">First Dance</span>
-            </figcaption>
-          </figure>
-          <figure class="gallery-item fade-in" data-category="editorial">
-            <img src="images/gallery-09.svg" alt="Brand editorial photograph">
-            <figcaption class="gallery-item__overlay">
-              <span class="gallery-item__caption">Still Life</span>
-            </figcaption>
-          </figure>
+          <div class="gallery-item"><img src="images/maternity-01.jpg" alt="Maternity photo"></div>
+          <div class="gallery-item"><img src="images/newborn-01.jpg" alt="Newborn photo"></div>
+          <div class="gallery-item"><img src="images/cakesmash-01.jpg" alt="Cake smash photo"></div>
+          <div class="gallery-item"><img src="images/maternity-02.jpg" alt="Maternity photo"></div>
+          <div class="gallery-item"><img src="images/newborn-02.jpg" alt="Newborn photo"></div>
+          <div class="gallery-item"><img src="images/cakesmash-02.jpg" alt="Cake smash photo"></div>
+          <div class="gallery-item"><img src="images/maternity-03.jpg" alt="Maternity photo"></div>
+          <div class="gallery-item"><img src="images/newborn-03.jpg" alt="Newborn photo"></div>
+          <div class="gallery-item"><img src="images/cakesmash-03.jpg" alt="Cake smash photo"></div>
         </div>
       </div>
-    </section>
-
-    <section class="cta-banner fade-in">
-      <h2>Love What You See?</h2>
-      <p>Let's create images that feel uniquely yours.</p>
-      <a href="contact.html" class="btn btn--light">Book a Session</a>
     </section>
   </main>
 
   <footer class="footer">
     <div class="container footer__inner">
-      <a href="index.html" class="footer__logo">Taran AY photography</a>
-      <nav class="footer__nav" aria-label="Footer navigation">
-        <a href="about.html">About</a>
+      <p>&copy; <span id="year"></span> Taran AY Photography. All Rights Reserved.</p>
+      <nav class="footer__nav">
+        <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="gallery.html">Gallery</a>
         <a href="contact.html">Contact</a>
       </nav>
-      <p class="footer__copy">&copy; 2026 Taran AY photography. All rights reserved.</p>
     </div>
   </footer>
 
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script type="text/javascript" src="https://wXXXXXX.alteg.io/widget/object/js" charset="UTF-8"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
