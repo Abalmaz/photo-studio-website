@@ -19,7 +19,7 @@
       </a>
       <nav class="nav" aria-label="Main navigation">
         <ul class="nav__list">
-          <li><a href="/" class="nav__link nav__link--active">Home</a></li>
+          <li><a href="/" class="nav__link">Home</a></li>
           <li><a href="/services" class="nav__link">Services</a></li>
           <li><a href="/gallery" class="nav__link">Gallery</a></li>
           <li><a href="/contact" class="nav__link">Contact</a></li>
@@ -45,14 +45,29 @@
   </nav>
 
   <main>
-    <section class="hero">
+    <section class="hero" style="background-image: url('/images/background.png');">
       <div class="hero__content">
-        <img src="images/main_page.jpg" alt="Taran AY Photography" class="hero__image">
+        <img src="images/main_page.png" alt="Two young girls in matching dresses playing on a rocking horse" class="hero__image">
       </div>
       <div class="hero__text">
         <p class="lead">newborn & maternity studio</p>
         <p class="tagline">Capturing the Tiniest Moments & Motherhood Journey</p>
         <a href="https://n1458700.alteg.io/" class="btn ms_booking">Online Booking</a>
+      </div>
+    </section>
+
+    <section class="section about-me">
+      <div class="container">
+        <div class="about-me__grid">
+          <div class="about-me__image">
+            <img src="/images/taran-portrait.jpg" alt="Portrait of Ida, the photographer">
+          </div>
+          <div class="about-me__content">
+            <h2 class="eyebrow">Meet Ida</h2>
+            <h3>A Passion for Preserving Precious Moments</h3>
+            <p>As a mother of two, I know just how quickly these fleeting moments pass. My passion is to create timeless, heartfelt images that your family will treasure for generations. I combine technical expertise with a gentle, patient approach to capture the pure, authentic connection between you and your little ones.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -87,6 +102,26 @@
       </div>
     </section>
 
+    <section class="section testimonials">
+        <div class="container">
+            <h2 class="text-center eyebrow">Kind Words</h2>
+            <div class="testimonials__grid">
+                <div class="testimonial-card">
+                    <blockquote>“Ida was so patient and gentle with our newborn. The photos are absolutely breathtaking. We’ll cherish them forever.”</blockquote>
+                    <cite>— Jessica L., Newborn Session</cite>
+                </div>
+                <div class="testimonial-card">
+                    <blockquote>“I felt so beautiful and comfortable during my maternity shoot. Ida has a true gift for capturing the magic of pregnancy.”</blockquote>
+                    <cite>— Emily R., Maternity Session</cite>
+                </div>
+                <div class="testimonial-card">
+                    <blockquote>“The cake smash was so much fun, and the pictures are pure joy! I can’t stop smiling when I look at them.”</blockquote>
+                    <cite>— Sarah P., Cake Smash</cite>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="cta-banner">
       <div class="container">
         <h2>Follow Our Journey</h2>
@@ -97,14 +132,41 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer__inner">
-      <p>&copy; <span id="year"></span> Taran AY Photography</p>
-      <div class="footer-social">
-        <a href="https://www.instagram.com/taran_ay_photography/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__column">
+          <h4>Taran AY Photography</h4>
+          <p>Capturing the Tiniest Moments & Motherhood Journey.</p>
+        </div>
+        <div class="footer__column">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/gallery">Gallery</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:747-609-6961">747-609-6961</a></li>
+            <li>15720 Ventura Blvd, Suite 424<br>Encino, CA 91436</li>
+          </ul>
+        </div>
+        <div class="footer__column">
+          <h4>Social</h4>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/taran_ay_photography/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; <span id="year"></span> Taran AY Photography. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
-  <script type="text/javascript" src="https://w1458700.alteg.io/widgetJS" charset="UTF-8"></script>
+<!--  <script type="text/javascript" src="https://w1458700.alteg.io/widgetJS" charset="UTF-8"></script>-->
   <script src="/js/main.js"></script>
 </body>
 </html>
