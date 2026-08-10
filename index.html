@@ -12,17 +12,59 @@
 </head>
 <body>
 
+  <header class="header">
+    <div class="header__inner">
+      <a href="/" class="logo">
+        <img src="/images/logo.png" alt="Taran AY Photography Logo">
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <ul class="nav__list">
+          <li><a href="/" class="nav__link nav__link--active">Home</a></li>
+          <li><a href="/services" class="nav__link">Services</a></li>
+          <li><a href="/gallery" class="nav__link">Gallery</a></li>
+          <li><a href="/contact" class="nav__link">Contact</a></li>
+          <li><a href="https://n1458700.alteg.io/" class="btn ms_booking">Book Now</a></li>
+        </ul>
+      </nav>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" aria-label="Mobile navigation">
+    <ul class="mobile-nav__list">
+      <li><a href="/" class="mobile-nav__link">Home</a></li>
+      <li><a href="/services" class="mobile-nav__link">Services</a></li>
+      <li><a href="/gallery" class="mobile-nav__link">Gallery</a></li>
+      <li><a href="/contact" class="mobile-nav__link">Contact</a></li>
+      <li><a href="https://n1458700.alteg.io/" class="btn ms_booking" style="margin-top: 1rem;">Book Now</a></li>
+    </ul>
+  </nav>
+
   <main>
     <section class="hero">
-      <h1>Taran AY</h1>
-      <p class="lead">newborn & maternity studio</p>
-      <p class="tagline">Capturing the Tiniest Moments & Motherhood Journey</p>
-      <a href="https://nXXXXXX.alteg.io/" class="btn ms_booking">Online Booking</a>
+      <div class="hero__content">
+        <img src="images/main_page.jpg" alt="Taran AY Photography" class="hero__image">
+      </div>
+      <div class="hero__text">
+        <p class="lead">newborn & maternity studio</p>
+        <p class="tagline">Capturing the Tiniest Moments & Motherhood Journey</p>
+        <a href="https://n1458700.alteg.io/" class="btn ms_booking">Online Booking</a>
+      </div>
     </section>
 
     <section class="section">
       <div class="container">
         <div class="category-showcase">
+          <div class="category-card">
+            <a href="/gallery">
+              <img src="/images/maternity.png" alt="An expectant mother during a maternity photoshoot" class="category-card__image">
+            </a>
+            <h3 class="category-card__title">Maternity</h3>
+          </div>
           <div class="category-card">
             <a href="/gallery">
               <img src="/images/newborn.png" alt="A sleeping newborn baby" class="category-card__image">
@@ -37,9 +79,9 @@
           </div>
           <div class="category-card">
             <a href="/gallery">
-              <img src="/images/maternity.png" alt="An expectant mother during a maternity photoshoot" class="category-card__image">
+              <img src="/images/6_month.png" alt="A 6-month old baby milestone photo" class="category-card__image">
             </a>
-            <h3 class="category-card__title">Maternity</h3>
+            <h3 class="category-card__title">6 Month</h3>
           </div>
         </div>
       </div>
@@ -54,7 +96,15 @@
     </section>
   </main>
 
-  <script type="text/javascript" src="https://wXXXXXX.alteg.io/widget/object/js" charset="UTF-8"></script>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>&copy; <span id="year"></span> Taran AY Photography</p>
+      <div class="footer-social">
+        <a href="https://www.instagram.com/taran_ay_photography/" target="_blank" rel="noopener noreferrer">Instagram</a>
+      </div>
+    </div>
+  </footer>
+  <script type="text/javascript" src="https://w1458700.alteg.io/widgetJS" charset="UTF-8"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>
