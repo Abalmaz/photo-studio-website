@@ -10,6 +10,7 @@
   --color-accent: #b9a483;
   --color-border: #E5E2DC;
   --color-white: #FFFFFF;
+  --color-cta-dark: #181716;
 
   --font-heading: 'Gupter', serif;
   --font-body: 'Source Sans Pro', sans-serif;
@@ -28,11 +29,11 @@
 
 /* --- Reset & Base --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html { scroll-behavior: smooth; font-size: 17px; }
 body {
   font-family: var(--font-body);
   font-weight: 300;
-  line-height: 1.7;
+  line-height: 1.8;
   color: var(--color-text);
   background-color: var(--color-bg);
   -webkit-font-smoothing: antialiased;
@@ -44,10 +45,10 @@ ul { list-style: none; }
 button { font-family: inherit; cursor: pointer; border: none; background: none; }
 
 /* --- Typography --- */
-h1, h2, h3, h4, .nav__link, .btn {
+h1, h2, h3, h4 {
   font-family: var(--font-heading);
   font-weight: 400;
-  color: var(--color-text);
+  color: var(--color-headings);
 }
 h1 { font-size: clamp(3rem, 6vw, 5.5rem); }
 h2 { font-size: clamp(2.5rem, 5vw, 4rem); }
@@ -84,7 +85,7 @@ main { padding-top: var(--header-height); }
 /* --- Header & Navigation --- */
 .header { position: fixed; top: 0; left: 0; right: 0; z-index: 1000; height: var(--header-height); background-color: rgba(247, 239, 234, 0.85); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border-bottom: 1px solid var(--color-border); }
 .header__inner { display: flex; align-items: center; justify-content: space-between; height: 100%; padding: 0 var(--space-md); max-width: var(--max-width); margin: 0 auto; }
-.logo img { height: 60px; width: auto; }
+.logo img { height: 140px; width: auto; }
 .nav { display: none; }
 .nav__list { display: flex; align-items: center; gap: var(--space-md); }
 .nav__link {
@@ -239,6 +240,27 @@ main { padding-top: var(--header-height); }
 .page-intro__btn:hover {
   background-color: transparent;
   color: var(--color-accent);
+}
+
+/* --- Section Heading --- */
+.section-heading {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+.section-heading h2 {
+  font-size: 1.5rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+}
+.section-heading p {
+  max-width: 60ch;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--color-text-secondary);
+}
+.section-heading .divider {
+  margin-top: var(--space-md);
 }
 
 
