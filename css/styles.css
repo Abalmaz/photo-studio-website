@@ -222,7 +222,7 @@ main { padding-top: var(--header-height); }
 
 @media (min-width: 992px) {
   .page-intro {
-    background-image: url('/images/hero_background.jpg');
+    background-image: url('/images/hero_background.webp');
     background-size: cover;
     background-position: center 15%;
     min-height: 80vh;
