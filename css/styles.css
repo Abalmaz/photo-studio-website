@@ -147,7 +147,7 @@ main { padding-top: var(--header-height); }
 .mobile-nav__list { text-align: center; }
 .mobile-nav__link { display: block; font-size: 2.5rem; padding: var(--space-xs) 0; }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .nav { display: block; }
   .menu-toggle { display: none; }
 }
@@ -173,9 +173,36 @@ main { padding-top: var(--header-height); }
 }
 
 .page-intro__content {
-  text-align: left;
-  width: 100%;
-  max-width: 600px;
+  position: relative;
+  z-index: 2;
+  max-width: 540px;
+  margin-left: 2vw;
+}
+.page-intro__eyebrow,
+.page-intro__headline,
+.page-intro__body {
+  color: var(--color-white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+.page-intro__headline {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Change the button to the dark CTA color so it doesn't vanish */
+  .page-intro__btn {
+    background-color: var(--color-cta-dark);
+    border-color: var(--color-cta-dark);
+    color: var(--color-white);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Helps the button pop */
+  }
+
+  .page-intro__btn:hover {
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+    color: var(--color-cta-dark);
 }
 
 @media (max-width: 767px) {
@@ -200,7 +227,7 @@ main { padding-top: var(--header-height); }
     background-position: center 15%;
     min-height: 80vh;
     min-height: max(80vh, 700px);
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     position: relative;
   }
@@ -211,10 +238,10 @@ main { padding-top: var(--header-height); }
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      to right,
-      rgba(28,28,28,0.45) 0%,
-      rgba(28,28,28,0.25) 35%,
+    background: radial-gradient(
+      circle at center,
+      rgba(28, 28, 28, 0.35) 0%,
+      rgba(28, 28, 28, 0.15) 30%,
       transparent 60%
     );
     z-index: 1;
@@ -231,6 +258,9 @@ main { padding-top: var(--header-height); }
   .page-intro__content {
     position: relative;
     z-index: 2;
+    max-width: 600px;
+    text-align: center;
+    margin: 0 auto;
   }
   .page-intro__eyebrow,
   .page-intro__headline,
@@ -338,7 +368,7 @@ main { padding-top: var(--header-height); }
 }
 
 .about-me__title {
-  font-size: clamp(1.8rem, 3vw, 2.5rem); /* Slightly larger */
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
   margin-bottom: var(--space-sm);
   line-height: 1.2;
 }
@@ -347,12 +377,12 @@ main { padding-top: var(--header-height); }
   font-size: 1.2rem; /* Increased size */
   line-height: 1.6;
   color: var(--color-headings);
-  margin-bottom: var(--space-md); /* More breathing room below */
-  font-weight: 400; /* Bump up from the global 300 to add contrast */
+  margin-bottom: var(--space-md);
+  font-weight: 400;
 }
 
 .about-me__content p {
-  font-size: 1.05rem; /* Slight bump in readability */
+  font-size: 1.05rem;
   line-height: 1.8;
   color: var(--color-text);
   margin-bottom: var(--space-sm);
