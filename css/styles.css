@@ -178,11 +178,17 @@ main { padding-top: var(--header-height); }
   max-width: 540px;
   margin-left: 2vw;
 }
-.page-intro__eyebrow,
-.page-intro__headline,
+.page-intro__eyebrow {
+  color: var(--color-text-secondary);
+  text-shadow: none;
+}
+.page-intro__headline {
+  color: var(--color-headings);
+  text-shadow: none;
+}
 .page-intro__body {
-  color: var(--color-white);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  color: var(--color-text);
+  text-shadow: none;
 }
 .page-intro__headline {
     font-size: clamp(2.5rem, 5vw, 4rem);
@@ -207,13 +213,17 @@ main { padding-top: var(--header-height); }
 
 @media (max-width: 767px) {
   .page-intro {
-    padding: var(--space-md) var(--space-sm);
+    padding: var(--space-md) 0;
   }
   .page-intro__image {
     margin-bottom: var(--space-md);
+    width: 100%;
+    max-width: 100%;
   }
   .page-intro__content {
-    padding-right: 90px; /* clears the floating widget's footprint */
+    padding-left: var(--space-sm);
+    padding-right: 90px;
+    margin-left: 0;
   }
   .page-intro__body {
     margin-bottom: var(--space-sm);
@@ -412,14 +422,21 @@ main { padding-top: var(--header-height); }
 /* --- Category Showcase (Home) --- */
 .category-showcase {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-md);
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+@media (min-width: 768px) {
+  .category-showcase {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
 }
 @media (min-width: 992px) {
   .category-showcase {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr); /* Desktop: 4 columns */
   }
 }
+
 .category-card { position: relative; text-align: center; }
 .category-card__image {
   aspect-ratio: 3 / 4;
@@ -451,6 +468,18 @@ main { padding-top: var(--header-height); }
 .service-card .btn {
   width: 100%;
   margin-bottom: var(--space-sm);
+  padding: 0.875rem 0.5rem;
+  font-size: 0.85rem;
+  line-height: 1.3;
+
+  /* Flexbox keeps text vertically and horizontally centered */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  /* Ensures all buttons are the exact same height, even if one wraps to two lines */
+  min-height: 56px;
 }
 .service-card__gallery-link {
   font-size: 0.8125rem;
@@ -588,16 +617,4 @@ main { padding-top: var(--header-height); }
 .footer-social { display: flex; gap: var(--space-md); justify-content: center; }
 @media (min-width: 768px) {
   .footer-social { justify-content: flex-start; }
-}
-
-/* --- Floating Widget Fix --- */
-.y-widget-button {
-  min-width: 84px;
-  min-height: 84px;
-  padding: 8px;
-  white-space: nowrap;
-  font-size: 11px;
-}
-body.footer-visible .y-widget-button {
-  transform: translateY(-150px);
 }
