@@ -86,7 +86,7 @@ The gallery page reads from a file called `images/gallery-manifest.json`, which 
 **Run this command from the project's root folder:**
 
 ```
-node scripts/generate-gallery.js
+node js/generate-gallery.js
 ```
 
 This scans all four folders and rewrites `gallery-manifest.json` automatically — you don't need to edit that file by hand.
