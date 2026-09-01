@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(manifest => {
       renderGallery(manifest);
       setupFilters();
+      applyFilterFromURL(); // NEW — reads ?category= and pre-filters on load
     })
     .catch(err => {
       console.error('Could not load gallery manifest:', err);
@@ -51,27 +52,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function setupFilters() {
     filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const filter = button.dataset.filter;
-
-        filterButtons.forEach(b => b.classList.remove('active'));
-        button.classList.add('active');
-
-        const items = document.querySelectorAll('.gallery-item');
-        let visibleCount = 0;
-
-        items.forEach(item => {
-          const match = filter === 'all' || item.dataset.category === filter;
-          item.classList.toggle('is-hidden', !match);
-          if (match) visibleCount++;
-        });
-
-        emptyMsg.hidden = visibleCount > 0;
-        if (visibleCount === 0) {
-          emptyMsg.textContent = 'No photos found in this category yet.';
-        }
-      });
+      button.addEventListener('click', () => applyFilter(button.dataset.filter));
     });
+  }
+
+  function applyFilter(filter) {
+    filterButtons.forEach(b => b.classList.remove('active'));
+
+    const matchingButton = document.querySelector(`.gallery-filter[data-filter="${filter}"]`);
+    if (matchingButton) {
+      matchingButton.classList.add('active');
+    } else {
+      document.querySelector('.gallery-filter[data-filter="all"]')?.classList.add('active');
+      filter = 'all';
+    }
+
+    const items = document.querySelectorAll('.gallery-item');
+    let visibleCount = 0;
+
+    items.forEach(item => {
+      const match = filter === 'all' || item.dataset.category === filter;
+      item.classList.toggle('is-hidden', !match);
+      if (match) visibleCount++;
+    });
+
+    emptyMsg.hidden = visibleCount > 0;
+    if (visibleCount === 0) {
+      emptyMsg.textContent = 'No photos found in this category yet.';
+    }
+  }
+
+  function applyFilterFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category');
+    if (category) {
+      applyFilter(category);
+    }
   }
 
   function categoryLabel(category) {
