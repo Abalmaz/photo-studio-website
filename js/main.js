@@ -47,7 +47,7 @@
     navLinks.forEach(link => {
       const linkPath = new URL(link.href).pathname;
       const isHomePage = (currentPath === '/' || currentPath === '/index.html') && linkPath === '/';
-      
+
       if (linkPath === currentPath || isHomePage) {
         link.classList.add('nav-active');
         link.setAttribute('aria-current', 'page');
@@ -96,32 +96,3 @@
   });
 
 })();
-
-fetch('/images/gallery-manifest.json')
-  .then(res => res.json())
-  .then(manifest => {
-    const grid = document.getElementById('gallery-grid');
-
-    Object.entries(manifest).forEach(([category, files]) => {
-      files.forEach(filename => {
-        const item = document.createElement('div');
-        item.className = 'gallery-item';
-        item.dataset.category = category;
-        item.innerHTML = `<img src="/images/${category}/${filename}" alt="${category} session photo" loading="lazy">`;
-        grid.appendChild(item);
-      });
-    });
-
-    // Filtering
-    const buttons = document.querySelectorAll('.gallery-filter');
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const filter = button.dataset.filter;
-        buttons.forEach(b => b.classList.remove('active'));
-        button.classList.add('active');
-        document.querySelectorAll('.gallery-item').forEach(el => {
-          el.classList.toggle('is-hidden', filter !== 'all' && el.dataset.category !== filter);
-        });
-      });
-    });
-  });
