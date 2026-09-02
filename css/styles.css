@@ -700,11 +700,99 @@ main { padding-top: var(--header-height); }
   display: block;
 }
 
-.pricing-card__note {
-  font-size: 0.8125rem;
-  color: var(--color-text-secondary);
-  font-style: italic;
-  line-height: 1.5;
-  margin-top: -0.5rem;
+
+.prep-page {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.prep-page__title {
   margin-bottom: var(--space-md);
+}
+.prep-page__list {
+  list-style: none;
+  margin: var(--space-md) 0;
+  padding: 0;
+}
+.prep-page__list li {
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid var(--color-border);
+  line-height: 1.7;
+}
+.prep-page__list li:last-child {
+  border-bottom: none;
+}
+.prep-page__list strong {
+  display: block;
+  color: var(--color-headings);
+  font-family: var(--font-heading);
+  font-size: 1.125rem;
+  margin-bottom: 0.25rem;
+}
+.prep-page__actions {
+  margin-top: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+}
+
+.prep-notice {
+  max-width: 640px;
+  margin: var(--space-lg) auto 0;
+  padding: var(--space-md) var(--space-lg);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-white);
+}
+
+.prep-asterisk {
+  font-size: 1.5rem;
+  font-weight: 700;
+  vertical-align: super;
+  line-height: 0;
+}
+
+.prep-callout {
+  margin-top: var(--space-lg);
+}
+.prep-callout__link {
+  display: block;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  color: var(--color-cta-dark);
+  background-color: rgba(185, 164, 131, 0.18); /* soft tan tint of --color-accent */
+  border: 2px solid var(--color-accent);
+  transition: background-color var(--transition);
+}
+.prep-callout__link:hover {
+  background-color: rgba(185, 164, 131, 0.3);
+  opacity: 1;
+}
+.prep-callout__tag {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+.prep-notice__title {
+  font-size: 1.125rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-sm);
+  color: var(--color-headings);
+}
+.prep-notice p {
+  font-size: 0.9375rem;
+  margin-bottom: var(--space-sm);
+}
+.prep-notice__list {
+  margin: 0 0 var(--space-sm);
+  padding-left: 1.25rem;
+  list-style: disc;
+}
+.prep-notice__list li {
+  font-size: 0.9375rem;
+  margin-bottom: var(--space-xs);
+  line-height: 1.6;
 }
