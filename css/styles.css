@@ -736,9 +736,6 @@ main { padding-top: var(--header-height); }
   flex-wrap: wrap;
 }
 
-/* CHANGED: this rule was previously missing — its properties had been
-   accidentally merged into .prep-page__actions above, which left this
-   box (used on the Services page Newborn section) completely unstyled. */
 .prep-notice {
   max-width: 640px;
   margin: var(--space-lg) auto 0;
@@ -748,26 +745,35 @@ main { padding-top: var(--header-height); }
 }
 
 .prep-asterisk {
-  font-size: 1.125rem;
+  font-size: 1.5rem;
+  font-weight: 700;
   vertical-align: super;
   line-height: 0;
 }
 
 .prep-callout {
-  margin-top: var(--space-md);
+  margin-top: var(--space-lg);
 }
 .prep-callout__link {
-  display: inline-block;
-  font-size: 1rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: var(--color-accent);
-  border-bottom: 1px solid var(--color-accent);
-  padding-bottom: 2px;
-  transition: opacity var(--transition);
+  display: block;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: var(--space-sm) var(--space-md);
+  font-size: 1.0625rem;
+  line-height: 1.5;
+  color: var(--color-cta-dark);
+  background-color: rgba(185, 164, 131, 0.18); /* soft tan tint of --color-accent */
+  border: 2px solid var(--color-accent);
+  transition: background-color var(--transition);
 }
 .prep-callout__link:hover {
-  opacity: 0.7;
+  background-color: rgba(185, 164, 131, 0.3);
+  opacity: 1;
+}
+.prep-callout__tag {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
 .prep-notice__title {
   font-size: 1.125rem;
