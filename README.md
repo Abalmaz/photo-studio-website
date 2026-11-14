@@ -1,9 +1,11 @@
 # Photo Studio Website
 
-This is a simple, static website for a photo studio. It includes the following pages:
+**Live site:** [taranphoto.com](https://taranphoto.com/)
+![Home page of the photo studio website](images/index_page.png)
+
+This is a simple, responsive, static website for a photo studio. It includes the following pages:
 
 *   **index.html**: The main landing page.
-*   **about.html**: Information about the studio.
 *   **services.html**: A description of the services offered.
 *   **gallery.html**: A gallery of photos.
 *   **contact.html**: A contact form and information.
@@ -114,7 +116,13 @@ git commit -m "Add new newborn gallery photo"
 git push
 ```
 
-Once pushed, the live site will update automatically (Vercel redeploys on every push to the main branch). Give it a minute, then check the Gallery page and confirm the new photo appears under the right filter tab.
+Once pushed, the live site updates automatically:
+
+- Vercel redeploys on every push to the `develop` branch (dev environment).
+- Cloudflare redeploys on every push to the `master` branch (prod environment).
+
+Give it a minute, then check the Gallery page and confirm the new photo
+appears under the right filter tab.
 
 ## Quick Checklist
 
@@ -122,7 +130,7 @@ Once pushed, the live site will update automatically (Vercel redeploys on every 
 - [ ] Original(s) placed in `images/raw/<category>/`
 - [ ] Ran `python resize_image.py <category>` (e.g. `python resize_image.py newborn`)
 - [ ] Confirmed the resized `.webp` file(s) appear in `images/<category>/`
-- [ ] Ran `node scripts/generate-gallery.js`
+- [ ] Ran `node js/generate-gallery.js`
 - [ ] Confirmed the photo appears in the manifest output
 - [ ] Committed the raw original, the `.webp` file, and the updated manifest
 - [ ] Pushed and verified on the live site
@@ -140,7 +148,7 @@ Once pushed, the live site will update automatically (Vercel redeploys on every 
 - It was placed in the wrong raw subfolder. Move it to the correct one, re-run `python resize_image.py <correct category>`, then re-run the manifest script.
 
 **`resize_image.py` gives an error when run:**
-- Make sure you're running the command from the project's root folder (the same folder that contains `resize_image.py`, `images/`, and `scripts/`), not from inside a subfolder.
+- Make sure you're running the command from the project's root folder (the same folder that contains `resize_image.py`, `images/`, and `js/`), not from inside a subfolder.
 - Make sure you included a category name as the argument (e.g. `python resize_image.py maternity`) — running the script with no argument, or an invalid category name, will print a usage message and exit without processing anything.
 - Confirm Python and Pillow are installed. If you're not sure, run `pip install Pillow` (or `pip install -r requirements.txt` if that file exists in the project).
 
